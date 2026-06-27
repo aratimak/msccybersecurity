@@ -468,34 +468,46 @@ z-index:-1;
     left: 0;
     width: 100%;
 
+    hight: 75px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 80px;
+    padding: 0 70px;
 
-    background: rgba(3, 12, 35, 0.95);
+    background: #06142b;
+
     backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(0,180,255,.3);
+    border-bottom: 1px solid #0ea5e9;
 
-    z-index: 1000;
+    z-index: 9999;
 }
 
 .navbar ul{
     display:flex;
+
     list-style:none;
+
     gap:40px;
+
     margin:0;
+
     padding:0;
 }
 
 .logo{
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
     font-size:28px;
+
     font-weight:bold;
+
     color:#00d9ff;
 }
 .navbar a{
@@ -526,8 +538,10 @@ color:#00d9ff !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    width: 100%
 
-    padding: 150px 80px 80px;
+    padding: 120px 80px 50px;
 
     min-height: 100vh;
 }
