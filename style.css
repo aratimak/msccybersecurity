@@ -535,15 +535,17 @@ color:#00d9ff !important;
 }
 
 .hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display:grid;
+
+    grid-template-columns:1fr 1fr 350px;
+ 
+    align-items:center;
+   
+    gap:40px;
     
-    width: 100%
+    width:95%
 
-    padding: 120px 80px 50px;
-
-    min-height: 100vh;
+    margin:110px auto 40px;
 }
 
 .hero-left{
@@ -597,25 +599,18 @@ filter:drop-shadow(0 0 30px #00bfff);
 .cards{
 
 display:flex;
-justify-content: space-betwwen;
-align items: flex-start;
+
+flex-direction:column;
 
 gap:25px;
-
-width: 95%;
-margin: 60px auto:
-
-
-flex-wrap:nowrap;
 
 }
 
 .card{
 
-width:320px;
-min-hight:250px;
+width:100%;
 
-padding:35px;
+padding:30px;
 
 background:rgba(255,255,255,.05);
 
@@ -629,15 +624,11 @@ transition:.4s;
 
 text-align:center;
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-
 }
 
 .card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-5px);
 
 box-shadow:0 0 25px #00bfff;
 
