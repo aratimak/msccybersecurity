@@ -481,6 +481,7 @@ z-index:-1;
 
     z-index: 9999;
 }
+
 .logo{
 
 display:flex;
@@ -504,6 +505,10 @@ display:flex;
 list-style:none;
 
 gap:40px;
+
+margin:0;
+
+padding:0;
 
 }
 
@@ -540,6 +545,8 @@ color:#00d9ff !important;
     min-height:100vh;
 
     padding:120px 80px 50px;
+   
+min-height: 100vh;
 }
 
 .hero-left{
