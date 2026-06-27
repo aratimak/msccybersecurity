@@ -597,20 +597,23 @@ filter:drop-shadow(0 0 30px #00bfff);
 .cards{
 
 display:flex;
+justify-content: space-betwwen;
+align items: flex-start;
 
-justify-content:center;
+gap:25px;
 
-gap:35px;
+width: 95%;
+margin: 60px auto:
 
-padding:30px 80px 80px;
 
-flex-wrap:wrap;
+flex-wrap:nowrap;
 
 }
 
 .card{
 
 width:320px;
+min-hight:250px;
 
 padding:35px;
 
@@ -620,11 +623,15 @@ border:1px solid rgba(0,180,255,.4);
 
 border-radius:20px;
 
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 
 transition:.4s;
 
 text-align:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
 
 }
 
