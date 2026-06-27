@@ -1,6 +1,7 @@
-/* ==========================
+/* ===========================
    GOOGLE FONT
-========================== */
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -8,204 +9,292 @@
     font-family:'Poppins',sans-serif;
 }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    background:#020817;
-    position:relative;
+html{
+    scroll-behavior:smooth;
 }
 
-/* ==========================
-   BACKGROUND
-========================== */
+body.home-page{
 
-.background{
+    background:#051229;
+    color:#fff;
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   BACKGROUND GLOW
+=========================== */
+
+.bg-glow{
+
     position:fixed;
-    inset:0;
-    background:
-    linear-gradient(rgba(1,8,30,.90),rgba(1,8,30,.90)),
-    url("hacker.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    z-index:-3;
+    border-radius:50%;
+    filter:blur(140px);
+    z-index:-1;
+
 }
 
-/* Blue overlay */
-.background::before{
-    content:"";
-    position:absolute;
+.glow1{
+
+    width:350px;
+    height:350px;
+
+    background:#00bfff;
+
+    top:-120px;
+    left:-120px;
+
+    opacity:.20;
+
+}
+
+.glow2{
+
+    width:450px;
+    height:450px;
+
+    background:#0066ff;
+
+    right:-180px;
+    bottom:-150px;
+
+    opacity:.15;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
     width:100%;
-    height:100%;
-    background:
-    radial-gradient(circle at top right,
-    rgba(0,170,255,.35),
-    transparent 55%);
-}
 
-/* ==========================
-   LOGIN CONTAINER
-========================== */
+    height:80px;
 
-.login-container{
-
-    width:950px;
-    height:520px;
+    padding:0 80px;
 
     display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    border-radius:25px;
-
-    overflow:hidden;
-
-    background:rgba(8,15,35,.75);
+    background:rgba(3,12,35,.95);
 
     backdrop-filter:blur(12px);
 
-    border:2px solid rgba(0,174,255,.5);
+    border-bottom:1px solid rgba(0,191,255,.3);
 
-    box-shadow:
-
-    0 0 15px #00bfff,
-
-    0 0 35px rgba(0,180,255,.4),
-
-    0 0 80px rgba(0,150,255,.15);
+    z-index:999;
 
 }
 
-/* ==========================
-   LEFT PANEL
-========================== */
+.logo{
 
-.login-box{
-
-    width:50%;
-
-    padding:65px 55px;
-
-    color:white;
+    display:flex;
+    align-items:center;
+    gap:12px;
 
 }
 
-.login-box h1{
+.logo img{
 
-    font-size:42px;
-
-    margin-bottom:50px;
+    width:48px;
 
 }
 
-/* ==========================
-   INPUT BOX
-========================== */
+.logo h2{
 
-.input-box{
-
-    position:relative;
-
-    margin-bottom:35px;
+    font-size:30px;
+    color:#fff;
+    font-weight:700;
 
 }
 
-.input-box input{
+.logo span{
 
-    width:100%;
+    color:#00c8ff;
 
-    background:transparent;
+}
 
-    border:none;
+.navbar ul{
 
-    border-bottom:2px solid #8ebdff;
+    display:flex;
+    gap:45px;
+    list-style:none;
 
-    padding:14px 0;
+}
 
-    color:white;
+.navbar ul li a{
 
+    color:#fff;
+    text-decoration:none;
     font-size:18px;
-
-    outline:none;
-
-}
-
-.input-box input::placeholder{
-
-    color:#b8d7ff;
+    transition:.3s;
 
 }
 
-.input-box i{
+.navbar ul li a:hover,
+.navbar ul li a.active{
 
-    position:absolute;
+    color:#00c8ff;
 
-    right:10px;
+}
 
-    top:50%;
+/* ===========================
+   HERO
+=========================== */
 
-    transform:translateY(-50%);
+.hero{
 
-    color:#67c5ff;
+    width:90%;
+    margin:130px auto 80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.hero-content h1{
+
+    font-size:72px;
+    line-height:1.15;
+    font-weight:700;
+
+}
+
+.hero-content h1 span{
+
+    color:#00c8ff;
+
+    text-shadow:0 0 25px #00bfff;
+
+}
+
+.hero-content p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#d6d6d6;
+
+    max-width:620px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    background:linear-gradient(90deg,#0077ff,#00c8ff);
+
+    color:#fff;
+
+    padding:18px 55px;
+
+    border-radius:50px;
+
+    text-decoration:none;
 
     font-size:20px;
 
-}
-
-/* ==========================
-   BUTTON
-========================== */
-
-button{
-
-    width:100%;
-
-    padding:15px;
-
-    border:none;
-
-    border-radius:35px;
-
-    font-size:18px;
-
     font-weight:600;
 
-    cursor:pointer;
-
-    color:white;
-
-    background:linear-gradient(90deg,#0088ff,#00c6ff);
+    box-shadow:0 0 25px rgba(0,191,255,.7);
 
     transition:.35s;
 
-    box-shadow:
+}
 
-    0 0 15px #00b7ff;
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 0 40px #00bfff;
 
 }
 
-button:hover{
+/* ===========================
+   IMAGE
+=========================== */
 
-    transform:translateY(-3px);
+.hero-image{
 
-    box-shadow:
+    flex:1;
 
-    0 0 25px #00c6ff,
+    display:flex;
 
-    0 0 60px rgba(0,198,255,.6);
+    justify-content:center;
 
 }
 
-/* ==========================
-   RIGHT PANEL
-========================== */
+.hero-image img{
 
-.welcome{
+    width:100%;
 
-    width:50%;
+    max-width:560px;
 
-    position:relative;
+    border-radius:18px;
+
+    box-shadow:0 0 45px rgba(0,191,255,.45);
+
+}
+
+/* ===========================
+   SERVICES SECTION
+=========================== */
+
+.services{
+
+    width:90%;
+
+    margin:30px auto 90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(0,191,255,.35);
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    backdrop-filter:blur(12px);
+
+    min-height:320px;
 
     display:flex;
 
@@ -213,659 +302,158 @@ button:hover{
 
     justify-content:center;
 
-    align-items:center;
-
-    color:white;
-
-    text-align:center;
-
-    overflow:hidden;
-
-    background:linear-gradient(135deg,#0b63ff,#33d0ff);
-
-    clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);
-
-}
-
-.welcome::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-
-    height:500px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    filter:blur(25px);
-
-    animation:pulse 6s infinite;
-
-}
-
-.welcome h1{
-
-    font-size:48px;
-
-    z-index:2;
-
-    margin-bottom:20px;
-
-    text-shadow:0 0 12px #fff;
-
-}
-
-.welcome p{
-
-    z-index:2;
-
-    font-size:20px;
-
-    line-height:35px;
-
-    color:#eaf8ff;
-
-}
-
-/* ==========================
-   FLOATING GLOW CIRCLES
-========================== */
-
-.circle{
-
-    position:absolute;
-
-    border-radius:50%;
-
-    filter:blur(60px);
-
-    animation:float 10s infinite ease-in-out;
-
-}
-
-.c1{
-
-    width:220px;
-    height:220px;
-
-    background:#00bfff;
-
-    top:-70px;
-    left:-80px;
-
-}
-
-.c2{
-
-    width:180px;
-    height:180px;
-
-    background:#0066ff;
-
-    right:-60px;
-    bottom:-40px;
-
-}
-
-.c3{
-
-    width:120px;
-    height:120px;
-
-    background:#22d3ff;
-
-    top:60%;
-
-    left:15%;
-
-}
-
-/* ==========================
-   ANIMATION
-========================== */
-
-@keyframes float{
-
-0%{
-
-transform:translateY(0px);
-
-}
-
-50%{
-
-transform:translateY(-30px);
-
-}
-
-100%{
-
-transform:translateY(0px);
-
-}
-
-}
-
-@keyframes pulse{
-
-0%{
-
-transform:scale(1);
-
-opacity:.4;
-
-}
-
-50%{
-
-transform:scale(1.2);
-
-opacity:.7;
-
-}
-
-100%{
-
-transform:scale(1);
-
-opacity:.4;
-
-}
-
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-
-@media(max-width:900px){
-
-.login-container{
-
-width:95%;
-
-height:auto;
-
-flex-direction:column;
-
-}
-
-.login-box{
-
-width:100%;
-
-padding:50px 30px;
-
-}
-
-.welcome{
-
-width:100%;
-
-height:280px;
-
-clip-path:none;
-
-}
-
-.welcome h1{
-
-font-size:34px;
-
-}
-
-.welcome p{
-
-font-size:17px;
-
-line-height:30px;
-
-}
-
-}
-
-/*==========================
-HOME PAGE
-==========================*/
-
-.home-body{
-
-background:#04122b;
-
-color:white;
-
-overflow-x:hidden;
-
-}
-
-.home-bg{
-
-position:fixed;
-
-inset:0;
-
-background:
-
-linear-gradient(rgba(0,10,35,.85),rgba(0,10,35,.92)),
-
-url("hacker.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-z-index:-1;
-
-}
-
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    hight: 75px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 70px;
-
-    background: #06142b;
-
-    backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid #0ea5e9;
-
-    z-index: 9999;
-}
-
-.navbar ul{
-    display:flex;
-
-    list-style:none;
-
-    gap:40px;
-
-    margin:0;
-
-    padding:0;
-}
-
-.logo{
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    font-size:28px;
-
-    font-weight:bold;
-
-    color:#00d9ff;
-}
-.navbar a{
-
-text-decoration:none;
-
-color:white;
-
-font-size:18px;
-
-transition:.3s;
-
-}
-
-.navbar a:hover{
-
-color:#00d9ff;
-
-}
-
-.active{
-
-color:#00d9ff !important;
-
-}
-
-.hero{
-    display:grid;
-
-    grid-template-columns:1fr 1fr 350px;
- 
-    align-items:center;
-   
-    gap:40px;
-    
-    width:95%
-
-    margin:110px auto 40px;
-}
-
-.hero-left{
-
-width:50%;
-
-}
-
-.hero-left h1{
-
-font-size:60px;
-
-line-height:75px;
-
-margin-bottom:20px;
-
-}
-
-.hero-left p{
-
-font-size:19px;
-
-line-height:35px;
-
-color:#d5e9ff;
-
-margin-bottom:30px;
-
-}
-
-.hero-right{
-
-width:40%;
-
-display:flex;
-
-justify-content:center;
-
-}
-
-.shield{
-
-width:330px;
-
-animation:float 5s infinite;
-
-filter:drop-shadow(0 0 30px #00bfff);
-
-}
-
-.cards{
-
-display:flex;
-
-flex-direction:column;
-
-gap:25px;
-
-}
-
-.card{
-
-width:100%;
-
-padding:30px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(0,180,255,.4);
-
-border-radius:20px;
-
-backdrop-filter:blur(10px);
-
-transition:.4s;
-
-text-align:center;
-
 }
 
 .card:hover{
 
-transform:translateY(-5px);
+    transform:translateY(-12px);
 
-box-shadow:0 0 25px #00bfff;
+    box-shadow:0 0 30px rgba(0,191,255,.6);
+
+    border-color:#00c8ff;
 
 }
 
 .card i{
 
-font-size:55px;
+    font-size:65px;
 
-color:#00d9ff;
+    color:#00c8ff;
 
-margin-bottom:15px;
+    margin-bottom:25px;
 
 }
 
 .card h2{
 
-margin-bottom:15px;
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
 
 }
 
 .card p{
 
-color:#d9e7ff;
+    color:#d0d0d0;
 
-line-height:28px;
+    font-size:18px;
+
+    line-height:1.8;
 
 }
+
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
 
-text-align:center;
+    background:#04101f;
 
-padding:25px;
+    border-top:1px solid rgba(0,191,255,.3);
 
-font-size:16px;
+    text-align:center;
 
-color:#b6dcff;
+    padding:25px;
 
-}
+    font-size:17px;
 
-/*=====================
-NOTES PAGE
-======================*/
-
-.subject-title{
-
-text-align:center;
-
-font-size:42px;
-
-margin:50px 0;
-
-color:#00d9ff;
-
-text-shadow:0 0 20px #00bfff;
+    color:#cfcfcf;
 
 }
 
-.subjects{
+/* ===========================
+   RESPONSIVE
+=========================== */
 
-width:85%;
+@media(max-width:1200px){
 
-margin:auto;
+.hero{
 
-display:grid;
+    flex-direction:column;
 
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:25px;
-
-padding-bottom:60px;
+    text-align:center;
 
 }
 
-.subject{
+.hero-content p{
 
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(0,180,255,.5);
-
-border-radius:15px;
-
-overflow:hidden;
-
-backdrop-filter:blur(10px);
-
-transition:.4s;
+    max-width:100%;
 
 }
 
-.subject:hover{
+.services{
 
-box-shadow:0 0 20px #00bfff;
-
-transform:translateY(-5px);
+    grid-template-columns:repeat(2,1fr);
 
 }
 
-.subject summary{
+}
 
-padding:18px 25px;
+@media(max-width:768px){
 
-font-size:20px;
+.navbar{
 
-cursor:pointer;
-
-font-weight:600;
-
-color:white;
-
-list-style:none;
+    padding:0 20px;
 
 }
 
-.subject summary::-webkit-details-marker{
+.logo h2{
 
-display:none;
-
-}
-
-.subject summary::after{
-
-content:"▼";
-
-float:right;
-
-color:#00d9ff;
+    font-size:24px;
 
 }
 
-.subject[open] summary::after{
+.navbar ul{
 
-content:"▲";
-
-}
-
-.units{
-
-display:flex;
-
-flex-direction:column;
-
-padding:15px;
+    gap:20px;
 
 }
 
-.units a{
+.hero{
 
-padding:14px;
-
-margin:8px 0;
-
-text-decoration:none;
-
-color:white;
-
-border-radius:10px;
-
-background:#0d2748;
-
-transition:.3s;
+    margin-top:120px;
 
 }
 
-.units a:hover{
+.hero-content h1{
 
-background:#00bfff;
-
-color:#001428;
-
-font-weight:bold;
+    font-size:48px;
 
 }
 
-/*=========================
-UNIT PAGE
-==========================*/
+.hero-content p{
 
-.unit-container{
-
-width:700px;
-
-margin:100px auto;
-
-padding:50px;
-
-text-align:center;
-
-background:rgba(255,255,255,.05);
-
-border:2px solid rgba(0,180,255,.4);
-
-border-radius:25px;
-
-backdrop-filter:blur(15px);
-
-box-shadow:0 0 25px rgba(0,180,255,.4);
-
-animation:float 5s infinite;
+    font-size:18px;
 
 }
 
-.unit-container i{
+.hero-image img{
 
-font-size:90px;
-
-color:#00d9ff;
-
-margin-bottom:25px;
+    max-width:100%;
 
 }
 
-.unit-container h1{
+.services{
 
-font-size:40px;
-
-margin-bottom:20px;
-
-color:white;
+    grid-template-columns:1fr;
 
 }
 
-.unit-container p{
+.card{
 
-font-size:20px;
-
-line-height:35px;
-
-color:#d5e9ff;
-
-margin-bottom:40px;
+    min-height:auto;
 
 }
 
-.back-btn{
+.btn{
 
-width:250px;
+    font-size:18px;
+
+    padding:16px 40px;
+
+}
 
 }
